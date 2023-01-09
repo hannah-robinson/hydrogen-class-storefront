@@ -43,13 +43,13 @@ export default function Layout({ children }) {
           </Link>
           <ul className='header-navigation'>
             <li>
-              <a href='#'>Link 1</a>
+              <Link to='/catalog'>Catalog</Link>
             </li>
             <li>
-              <a href='#'>Link 2</a>
+              <Link to='/collections/freestyle'>Freestyle</Link>
             </li>
             <li>
-              <a href='#'>Link 3</a>
+              <Link to='/collections/backcountry'>Back Country</Link>
             </li>
           </ul>
         </div>

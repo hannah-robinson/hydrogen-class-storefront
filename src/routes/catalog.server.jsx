@@ -35,7 +35,7 @@ export default function Catalog() {
   )
 }
 
-// Best practice too name a query (Here: query products). Must state either first or last plus a number or you'll get an error.
+// Best practice to name a query (Here: query products). Must state either first or last plus a number or you'll get an error.
 const QUERY = gql`
   query products {
     products(first: 9) {
