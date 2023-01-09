@@ -1,6 +1,7 @@
 import { useShopQuery, CacheLong, gql } from '@shopify/hydrogen'
 import { Suspense } from 'react'
 import Layout from '../components/Layout.server'
+import ProductCard from '../components/ProductGridItem.server'
 
 // This is a .server.jsx file because we are querying the server. Whenever we query the server, we should use .server.js(Infosec)
 
@@ -24,11 +25,9 @@ export default function Catalog() {
       <Suspense>
         <div className='catalog-page container'>
           <div className='product-grid'>
-            <ul>
-              {nodes.map((product) => (
-                <li>{product.title}</li>
-              ))}
-            </ul>
+            {nodes.map((product) => (
+              <ProductCard product={product}></ProductCard>
+            ))}
           </div>
         </div>
       </Suspense>
@@ -43,6 +42,24 @@ const QUERY = gql`
       nodes {
         title
         handle
+        featuredImage {
+          url
+          altText
+          height
+          width
+        }
+        variants(first: 1) {
+          nodes {
+            priceV2 {
+              amount
+              currencyCode
+            }
+            compareAtPriceV2 {
+              amount
+              currencyCode
+            }
+          }
+        }
       }
     }
   }
