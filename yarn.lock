@@ -3171,7 +3171,7 @@ __metadata:
 
 "fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -5556,7 +5556,7 @@ __metadata:
 
 "resolve@patch:resolve@^1.22.0#~builtin<compat/resolve>":
   version: 1.22.1
-  resolution: "resolve@patch:resolve@npm%3A1.22.1#~builtin<compat/resolve>::version=1.22.1&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A1.22.1#~builtin<compat/resolve>::version=1.22.1&hash=07638b"
   dependencies:
     is-core-module: ^2.9.0
     path-parse: ^1.0.7
@@ -5911,13 +5911,13 @@ __metadata:
   linkType: hard
 
 "simple-git@npm:^3.5.0":
-  version: 3.14.0
-  resolution: "simple-git@npm:3.14.0"
+  version: 3.15.1
+  resolution: "simple-git@npm:3.15.1"
   dependencies:
     "@kwsites/file-exists": ^1.1.1
     "@kwsites/promise-deferred": ^1.1.1
     debug: ^4.3.4
-  checksum: 08cadd414ae0bbfcf3cfd91b19126a4fb09a4b6df49b6f8a107a57ec401a808f6067f28916b4eb4bb1a75ebdb9f0a96f0280da20d5cb4fba47bcac1766f81f70
+  checksum: 2b97c3ba3c0709eded408013336bf1822be4171d965f3ab45f5bfc05ec690f9e488e11280bec8e2faa05d3039c4769e9d8197040a48dc5cf21cc5c7fa22fe77f
   languageName: node
   linkType: hard
 
@@ -6456,7 +6456,7 @@ __metadata:
 
 "typescript@patch:typescript@^4.7.2#~builtin<compat/typescript>, typescript@patch:typescript@^4.7.4#~builtin<compat/typescript>":
   version: 4.8.3
-  resolution: "typescript@patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=aae4e6"
+  resolution: "typescript@patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
