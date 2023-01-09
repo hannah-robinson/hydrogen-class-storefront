@@ -1,4 +1,4 @@
-import { Image, Money } from '@shopify/hydrogen'
+import { Link, Image, Money } from '@shopify/hydrogen'
 // Image is Shopify H's fabulous responsive image component. You get nuilt in lazy loading and images sizes like you'd get in a trad Shopify theme image snippet
 // Money is a component similar to liquid theme price filters
 
@@ -10,12 +10,12 @@ export default function ProductCard({ product }) {
 
   return (
     <div className='product-grid-item'>
-      <div className='image-container'>
+      <Link to={`/products/${product.handle}`} className='image-container'>
         <Image
           alt={product.featuredImage.altText}
           data={product.featuredImage}
         />
-      </div>
+      </Link>
       <div className='product-grid-item-title'>{product.title}</div>
       <div className='product-grid-prices'>
         <Money withoutTrailingZeros data={price} />

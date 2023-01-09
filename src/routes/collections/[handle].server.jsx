@@ -7,7 +7,7 @@ import ProductCard from '../../components/ProductGridItem.server'
 
 export default function Collection() {
   const { handle } = useRouteParams()
-  // Because we are using useRouteParams, we need to a 'variables' property to the useShopQuery's argument object below
+  // Because we are using useRouteParams, we need to add a 'variables' property to the useShopQuery's argument object below
 
   const data = useShopQuery({
     query: QUERY,
