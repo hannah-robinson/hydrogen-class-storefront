@@ -18,8 +18,14 @@ export default function ProductCard({ product }) {
       </div>
       <div className='product-grid-item-title'>{product.title}</div>
       <div className='product-grid-prices'>
-        <Money data={price} />
-        {isDiscounted && <Money data={compareAtPrice} />}
+        <Money withoutTrailingZeros data={price} />
+        {isDiscounted && (
+          <Money
+            withoutTrailingZeros
+            className='product-compare-at-price'
+            data={compareAtPrice}
+          />
+        )}
       </div>
     </div>
   )
