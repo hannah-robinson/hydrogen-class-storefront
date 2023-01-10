@@ -46,10 +46,10 @@ export default function Layout({ children }) {
               <Link to='/catalog'>Catalog</Link>
             </li>
             <li>
-              <Link to='/collections/freestyle'>Freestyle</Link>
+              <Link to='/collections/freestyle'>Freestyle Collection</Link>
             </li>
             <li>
-              <Link to='/collections/backcountry'>Back Country</Link>
+              <Link to='/products/snowboard'>Top Product</Link>
             </li>
           </ul>
         </div>

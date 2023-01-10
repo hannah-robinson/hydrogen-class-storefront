@@ -6,7 +6,9 @@ import {
   Seo,
 } from '@shopify/hydrogen'
 import { Suspense } from 'react'
+
 import Layout from '../../components/Layout.server'
+import ProductDetails from '../../components/ProductDetails.client'
 // import ProductCard from '../../components/ProductGridItem.server'
 
 // This is a .server.jsx file because we are querying the server. Whenever we query the server, we should use .server.js (Infosec)
@@ -31,8 +33,8 @@ export default function Product() {
     <Layout>
       <Suspense>
         <Seo type='product' data={product} />
+        <ProductDetails product={product} />
       </Suspense>
-      <div className='product-page container'>{product.title}</div>
     </Layout>
   )
 }
