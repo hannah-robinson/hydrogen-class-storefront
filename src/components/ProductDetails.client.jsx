@@ -3,6 +3,7 @@ import {
   useProductOptions,
   Image,
   ProductPrice,
+  AddToCartButton,
   // AddToCart,
 } from '@shopify/hydrogen'
 
@@ -30,7 +31,7 @@ function ProductForm({ product }) {
   // useProductOptions is a state object, selectedVariant.id in the Price componentt below will update as we change our selection. Powerful hook. setSelectedOption is a method we can call onChange
 
   // const isDiscounted = compareAtPrice?.amount > price?.amount
-
+  const isOutOfStock = !selectedVariant?.availableForSale || false
   return (
     <div>
       <h1>{product.title}</h1>
@@ -77,6 +78,9 @@ function ProductForm({ product }) {
           )
         })}
       </div>
+      <AddToCartButton disabled={isOutOfStock} className='add-to-cart'>
+        {isOutOfStock ? 'Out of Stock' : 'ADD TO CART'}
+      </AddToCartButton>
       <div
         className='product-description'
         dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
