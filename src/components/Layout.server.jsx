@@ -51,6 +51,9 @@ export default function Layout({ children }) {
             <li>
               <Link to='/products/snowboard'>Top Product</Link>
             </li>
+            <li>
+              <Link to='/blog'>Blog</Link>
+            </li>
           </ul>
           <Link to='/cart' className='header-cart-link'>
             <svg
