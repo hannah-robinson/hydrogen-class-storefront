@@ -26,9 +26,24 @@ export default function Article() {
     },
   })
 
-  console.log(articleByHandle)
+  // console.log(articleByHandle)
 
   const article = articleByHandle
+
+  const {
+    language: { isoCode: languageCode },
+    country: { isoCode: countryCode },
+  } = useLocalization()
+
+  // new Intl.DateTimeFormat() is a JS specification not React or Hydrogen
+  const formattedDate = new Intl.DateTimeFormat(
+    `${languageCode}-${countryCode}`,
+    {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    }
+  ).format(new Date(article.publishedAt))
 
   if (!article) {
     return (
@@ -50,7 +65,7 @@ export default function Article() {
           <div className='article'>
             <h1>{article.title}</h1>
             <span>
-              {article.publishedAt} . {article.authorV2.name}
+              {formattedDate} . {article.authorV2.name}
             </span>
             <article>
               <Image data={article.image} altText={article.image.altText} />
