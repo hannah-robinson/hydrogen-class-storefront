@@ -33,8 +33,8 @@ export default function Product() {
     <Layout>
       <Suspense>
         <Seo type='product' data={product} />
-        <ProductDetails product={product} />
       </Suspense>
+      <ProductDetails product={product} />
     </Layout>
   )
 }
