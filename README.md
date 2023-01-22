@@ -8,7 +8,13 @@ Hydrogen is a React framework and SDK that you can use to build fast and dynamic
 
 [Run this template in TypeScript on StackBlitz](https://stackblitz.com/github/Shopify/hydrogen/tree/dist/templates/hello-world-js?file=package.json)
 
-## Getting started
+## IMPORTANT NOTE ABOUT ERRORS AND CACHING
+
+There are often error messages that stop the app from running. Instructor suggests running
+
+`yarn dev --force`
+
+to get it working again.
 
 **Requirements:**
 
